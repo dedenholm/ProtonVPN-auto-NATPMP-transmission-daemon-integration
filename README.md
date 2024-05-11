@@ -19,7 +19,7 @@ This will enable port forwarding on the ProtonVPN server, a random port will be 
 ## the transmission-daemon integration checks for port changes and calls transmission-remote to update the listening port
 
 
-### use openrc init script:
+### use openrc service file:
 
 download the script to openrc init folder
 ```sh 
