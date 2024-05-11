@@ -37,4 +37,4 @@ start the script
 rc-service autonatpmpc start
 ```
 
-if you have a wireguard service script, edit the service file to add that service to its dependencies
+if you have a wireguard service script, edit the autonatpmpc service file to add the wireguard service to its dependencies
