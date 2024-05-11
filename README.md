@@ -4,7 +4,7 @@
 
 Download the script:
  ```sh
-curl https://github.com/dedenholm/ProtonVPN-auto-NATPMP-transmission-daemon-integration/blob/main/natpmpc_script_transmission-remote.sh -o natpmpc_script.sh
+curl https://raw.githubusercontent.com/dedenholm/ProtonVPN-auto-NATPMP-transmission-daemon-integration/main/natpmpc_script_transmission.sh -o natpmpc_script.sh
 ```
  Give execute permission:
  ```sh
@@ -23,8 +23,13 @@ This will enable port forwarding on the ProtonVPN server, a random port will be 
 
 download the script to openrc init folder
 ```sh 
-curl https://github.com/dedenholm/ProtonVPN-auto-NATPMP-transmission-daemon-integration/blob/main/openrc-init-script -o /etc/init.d/autonatpmpc
+curl https://raw.githubusercontent.com/dedenholm/ProtonVPN-auto-NATPMP-transmission-daemon-integration/main/openrc-init-script -o /etc/init.d/autonatpmpc
 ```
+make executable 
+```sh
+chmod +x /etc/init.d/autonatpmpc
+```
+
 add the script to default runlevel
 ```sh
 rc-update add autonatpmpc
@@ -37,4 +42,4 @@ start the script
 rc-service autonatpmpc start
 ```
 
-if you have a wireguard service script, edit the service file to add that service to its dependencies
+if you have a wireguard service script, edit the autonatpmpc service file to add the wireguard service to its dependencies
