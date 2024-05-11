@@ -18,3 +18,23 @@ This will enable port forwarding on the ProtonVPN server, a random port will be 
 
 ## the transmission-daemon integration checks for port changes and calls transmission-remote to update the listening port
 
+
+### use openrc init script:
+
+download the script to openrc init folder
+```sh 
+curl https://github.com/dedenholm/ProtonVPN-auto-NATPMP-transmission-daemon-integration/blob/main/openrc-init-script -o /etc/init.d/autonatpmpc
+```
+add the script to default runlevel
+```sh
+rc-update add autonatpmpc
+```
+
+start the script 
+
+
+```sh 
+rc-service autonatpmpc start
+```
+
+if you have a wireguard service script, edit the service file to add that service to its dependencies
