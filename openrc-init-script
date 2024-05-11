@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+description="request protonVPN wireguard port forward and Update transmisson listening port"
+depend () {
+
+##if you have an init script for wireguard put the name of the script here:
+# need <name of init script>
+}
+command="/usr/bin/natpmpc_script.sh"
+command_background=true
+command_user="daniel:daniel"
+pidfile="/run/${RC_SVCNAME}.pid"
+command_args="-p ${pidfile}"
