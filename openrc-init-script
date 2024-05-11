@@ -2,7 +2,7 @@
 description="request protonVPN wireguard port forward and Update transmisson listening port"
 depend () {
 
-##if you have an init script for wireguard put the name of the script here:
+##if you have  service file for wireguard, unncomment next line, and put the name of your service here
 # need <name of init script>
 }
 command="/usr/bin/natpmpc_script.sh"
