@@ -20,7 +20,7 @@ while true; do
   
     if [ "$current_port" != "$port" ]; then
 	
-	echo "port changed -- updating transmission port" >> $logfile    
+	echo "port changed -- updating transmission port"  
 	
     transmission-remote -p $port  
     
