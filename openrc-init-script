@@ -7,6 +7,7 @@ depend () {
 }
 command="/usr/bin/natpmpc_script.sh"
 command_background=true
-command_user="daniel:daniel"
+## insert your username and group below:
+command_user=""
 pidfile="/run/${RC_SVCNAME}.pid"
 command_args="-p ${pidfile}"
